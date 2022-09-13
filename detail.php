@@ -10,6 +10,7 @@
     $member=[
       [
         'name'=>'Nick Carter',
+        'image'=>'assets/images/image_of_me.jpg',
         'dream_profession'=>'Penetration Tester',
         'dream_company'=>'United States Central Intelligence Agency',
         'email'=>'cartern10@mymail.nku.edu',
@@ -19,6 +20,7 @@
       ],
       [
          'name'=>'Bob Edwards',
+         'image'=>'https://bootdey.com/img/Content/avatar/avatar7.png',
          'dream_profession'=>'Astronaut',
          'dream_company'=>'NASA',
          'email'=>'Bob@example.com',
@@ -28,6 +30,38 @@
       ],
       [
          'name'=>'Rick Astley',
+         'image'=>'https://bootdey.com/img/Content/avatar/avatar6.png',
+         'dream_profession'=>'Singer',
+         'dream_company'=>'Freelance',
+         'email'=>'RickAstley@example.com',
+         'intro'=>'Never Gonna Give You Up',
+         'quote'=>'Never Gonna Let You Down',
+         'fun_fact'=>'Never gonna run around and desert you',
+       ]
+    ];    $member=[
+      [
+        'name'=>'Nick Carter',
+        'image'=>'assets/images/image_of_me.jpg',
+        'dream_profession'=>'Penetration Tester',
+        'dream_company'=>'United States Central Intelligence Agency',
+        'email'=>'cartern10@mymail.nku.edu',
+        'intro'=>'Student at Northern Kentucky University studying cybersecurity',
+        'quote'=>'Caged birds think flying is an illness',
+        'fun_fact'=>'I transfered from Murray State University.',
+      ],
+      [
+         'name'=>'Bob Edwards',
+         'image'=>'https://bootdey.com/img/Content/avatar/avatar7.png',
+         'dream_profession'=>'Astronaut',
+         'dream_company'=>'NASA',
+         'email'=>'Bob@example.com',
+         'intro'=>'Aspiring Astronaut',
+         'quote'=>'That\'s one small step for man, one giant leap for mankind',
+         'fun_fact'=>'I\'ve watched every episode of SpongeBob',
+      ],
+      [
+         'name'=>'Rick Astley',
+         'image'=>'https://bootdey.com/img/Content/avatar/avatar6.png',
          'dream_profession'=>'Singer',
          'dream_company'=>'Freelance',
          'email'=>'RickAstley@example.com',
