@@ -14,7 +14,8 @@
     $member=[
       [
         'name'=>'Nick Carter',
-        'image'=>'assets/images/image_of_me.jpg',
+        'image'=>'assets/images/picture_of_me.jpg',
+        'designation'=>'student',
         'dream_profession'=>'Penetration Tester',
         'dream_company'=>'United States Central Intelligence Agency',
         'email'=>'cartern10@mymail.nku.edu',
@@ -25,6 +26,7 @@
       [
          'name'=>'Bob Edwards',
          'image'=>'https://bootdey.com/img/Content/avatar/avatar7.png',
+         'designation'=>'Pilot',
          'dream_profession'=>'Astronaut',
          'dream_company'=>'NASA',
          'email'=>'Bob@example.com',
@@ -35,6 +37,7 @@
       [
          'name'=>'Rick Astley',
          'image'=>'https://bootdey.com/img/Content/avatar/avatar6.png',
+         'designation'=>'Singer',
          'dream_profession'=>'Singer',
          'dream_company'=>'Freelance',
          'email'=>'RickAstley@example.com',
@@ -70,14 +73,14 @@
             <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
                <!-- Team Thumb-->
                <div class="advisor_thumb">
-               <a href="detail.php?=index=<?= $member[$i]['name'] ?>"><img src="<?= $member[$i]['image'] ?>" width="100%" height="100%" alt=""></a>
+               <a href="detail.php?=index=<?= $member[$i]['name'] ?>"><img src="<?= $member[$i]['image'] ?>" width="400px" height="600px" alt=""></a>
                <!-- Social Info-->
                <div class="social-info"><a href="detail.php?=index=<?= $member[$i] ?>"><i class="fa fa-facebook"></i></a><a href="detail.php?=index=<?= $member[$i] ?>"><i class="fa fa-twitter"></i></a><a href="detail.php?=index=<?= $member[0] ?>"><i class="fa fa-linkedin"></i></a></div>
                </div>
                <!-- Team Details-->
                <div class="single_advisor_details_info">
                <h6><?php echo $member[$i]['name']?></h6>
-               <p class="designation"><?php echo "Student" ?></p>
+               <p class="designation"><?php echo $member[$i]['designation']?></p>
             </div>
          </div>
       </div>
