@@ -11,42 +11,8 @@
    </head>
    <body>
    <?php
-    $member=[
-      [
-        'name'=>'Nick Carter',
-        'image'=>'assets/images/picture_of_me.jpg',
-        'designation'=>'student',
-        'dream_profession'=>'Penetration Tester',
-        'dream_company'=>'United States Central Intelligence Agency',
-        'email'=>'cartern10@mymail.nku.edu',
-        'intro'=>'Student at Northern Kentucky University studying cybersecurity',
-        'quote'=>'Caged birds think flying is an illness',
-        'fun_fact'=>'I transfered from Murray State University.',
-      ],
-      [
-         'name'=>'Bob Edwards',
-         'image'=>'https://bootdey.com/img/Content/avatar/avatar7.png',
-         'designation'=>'Pilot',
-         'dream_profession'=>'Astronaut',
-         'dream_company'=>'NASA',
-         'email'=>'Bob@example.com',
-         'intro'=>'Aspiring Astronaut',
-         'quote'=>'That\'s one small step for man, one giant leap for mankind',
-         'fun_fact'=>'I\'ve watched every episode of SpongeBob',
-      ],
-      [
-         'name'=>'Rick Astley',
-         'image'=>'https://bootdey.com/img/Content/avatar/avatar6.png',
-         'designation'=>'Singer',
-         'dream_profession'=>'Singer',
-         'dream_company'=>'Freelance',
-         'email'=>'RickAstley@example.com',
-         'intro'=>'Never Gonna Give You Up',
-         'quote'=>'Never Gonna Let You Down',
-         'fun_fact'=>'Never gonna run around and desert you',
-       ]
-    ];
-    
+   include('data.php');
+   include('functions.php');
     ?>
     <div class="container text-center">
       <h1>This is ASE 230 - class of Fall 2022</h1>
@@ -65,27 +31,7 @@
       </div>
    </div>
    <?php
-   for($i=0;$i<count($member);$i++){
-   ?>
-      <div class="row">
-         <!-- Single Advisor-->
-         <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-               <!-- Team Thumb-->
-               <div class="advisor_thumb">
-               <a href="detail.php?=index=<?= $member[$i]['name'] ?>"><img src="<?= $member[$i]['image'] ?>" width="400px" height="600px" alt=""></a>
-               <!-- Social Info-->
-               <div class="social-info"><a href="detail.php?=index=<?= $member[$i] ?>"><i class="fa fa-facebook"></i></a><a href="detail.php?=index=<?= $member[$i] ?>"><i class="fa fa-twitter"></i></a><a href="detail.php?=index=<?= $member[0] ?>"><i class="fa fa-linkedin"></i></a></div>
-               </div>
-               <!-- Team Details-->
-               <div class="single_advisor_details_info">
-               <h6><?php echo $member[$i]['name']?></h6>
-               <p class="designation"><?php echo $member[$i]['designation']?></p>
-            </div>
-         </div>
-      </div>
-   <?php
-   }
+   createCard($member);
    ?>
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>

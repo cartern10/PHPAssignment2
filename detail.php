@@ -5,41 +5,8 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
 	<body>
   <?php
-    $member=[
-      [
-        'name'=>'Nick Carter',
-        'image'=>'assets/images/picture_of_me.jpg',
-        'designation'=>'student',
-        'dream_profession'=>'Penetration Tester',
-        'dream_company'=>'United States Central Intelligence Agency',
-        'email'=>'cartern10@mymail.nku.edu',
-        'intro'=>'Student at Northern Kentucky University studying cybersecurity',
-        'quote'=>'Caged birds think flying is an illness',
-        'fun_fact'=>'I transfered from Murray State University.',
-      ],
-      [
-         'name'=>'Bob Edwards',
-         'image'=>'https://bootdey.com/img/Content/avatar/avatar7.png',
-         'designation'=>'Pilot',
-         'dream_profession'=>'Astronaut',
-         'dream_company'=>'NASA',
-         'email'=>'Bob@example.com',
-         'intro'=>'Aspiring Astronaut',
-         'quote'=>'That\'s one small step for man, one giant leap for mankind',
-         'fun_fact'=>'I\'ve watched every episode of SpongeBob',
-      ],
-      [
-         'name'=>'Rick Astley',
-         'image'=>'https://bootdey.com/img/Content/avatar/avatar6.png',
-         'designation'=>'Singer',
-         'dream_profession'=>'Singer',
-         'dream_company'=>'Freelance',
-         'email'=>'RickAstley@example.com',
-         'intro'=>'Never Gonna Give You Up',
-         'quote'=>'Never Gonna Let You Down',
-         'fun_fact'=>'Never gonna run around and desert you',
-       ]
-    ];
+     include('data.php');
+     include('functions.php');
   ?>
 		<link rel="stylesheet" href="assets/css/detail.css" />
 		<title><?php echo "ASE 230 - Nick Carter" ?></title>
@@ -83,6 +50,14 @@
             <li class="media">
               <span class="w-25 text-black font-weight-normal">Email: </span>
               <label class="media-body"><h1><?= $member[$_GET['index']]['email'] ?></label>
+            </li>
+            <li class="media">
+              <span class="w-25 text-black font-weight-normal">Age: </span>
+              <label class="media-body"><h1><?= yearsOld($member[$_GET['index']]['DOB']) ?></label>
+            </li>
+            <li class="media">
+              <span class="w-25 text-black font-weight-normal">Age: </span>
+              <label class="media-body"><h1><?= multipleOld($member[$_GET['index']]['DOB']) ?></label>
             </li>
           </ul>
         </div>
